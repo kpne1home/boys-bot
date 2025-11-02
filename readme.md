@@ -19,6 +19,14 @@ mapping.
 6. Run script with `node voice-rename-bot.js`
 7. If running on server, add the `check-bot.sh` script to crontab to ensure the bot is always running
 
+### Contributing
+
+Do you want to add a feature or change the mappings? Start by cloning the repo with `git clone https://github.com/chandlervdw/boys-bot.git`.
+
+Edit the `mappings.json` file (or anything else), push your changes to a branch, and open a pull request into the `main` branch.
+
+Once merged, GitHub Actions will automatically deploy the changes to the server and restart the bot.
+
 ### Running on Server
 
 **Helper Scripts:**

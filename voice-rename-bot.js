@@ -11,6 +11,7 @@ import path from 'node:path';
 // ================== CONFIG ==================
 const NAME_MAP = {};
 const EMPTY_STATUS = 'No boys';
+const SPENCE_STATUS = "Grandma's boy";
 const SINGLE_STATUS = 'Tiny little baby lonely boy';
 const MAP_PATH = process.env.MAP_PATH || null;
 const USE_FALLBACK_NAMES = true;
@@ -107,6 +108,10 @@ async function computeDesiredStatus() {
     }
 
     if (names.length === 1) {
+        if (names[0] === 'BILjaeden') {
+            console.log(`[${timestamp()}] 🔍 Spence by himself → "${SPENCE_STATUS}"`);
+            return SPENCE_STATUS;
+        }
         console.log(`[${timestamp()}] 🔍 Single member → "${SINGLE_STATUS}"`);
         return SINGLE_STATUS;
     }
